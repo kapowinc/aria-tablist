@@ -418,7 +418,8 @@ export class Tablist {
             removeAttributes(panel, 'hidden aria-hidden');
             // set expanded, only on multi-selectable tablists
             if (this.multiple) {
-                setAttribute(panel, 'aria-expanded', 'true');
+                // KAPOW: this causes failed accessiblity test
+                // setAttribute(panel, 'aria-expanded', 'true');
                 setAttribute(tab, 'aria-expanded', 'true');
             }
             // ensure panel is in the normal tabbing order
@@ -470,7 +471,8 @@ export class Tablist {
             setAttribute(panel, 'aria-hidden', 'true');
             // set aria-expanded in multiple mode
             if (this.multiple) {
-                setAttribute(tab, 'aria-expanded', 'false');
+                // KAPOW: this causes failed accessiblity test
+                // setAttribute(tab, 'aria-expanded', 'false');
                 setAttribute(panel, 'aria-expanded', 'false');
             }
             // in single select mode, remove aria-expanded from both elements
