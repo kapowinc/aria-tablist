@@ -472,13 +472,13 @@ export class Tablist {
             // set aria-expanded in multiple mode
             if (this.multiple) {
                 // KAPOW: this causes failed accessiblity test
-                // setAttribute(tab, 'aria-expanded', 'false');
-                setAttribute(panel, 'aria-expanded', 'false');
+                setAttribute(tab, 'aria-expanded', 'false');
+                // setAttribute(panel, 'aria-expanded', 'false');
             }
             // in single select mode, remove aria-expanded from both elements
             // in case modes have changed between user actions
             else {
-                removeAttributes(panel, 'aria-expanded');
+                // removeAttributes(panel, 'aria-expanded');
                 removeAttributes(tab, 'aria-expanded');
             }
             // determine if callback should fire
